@@ -1,0 +1,6 @@
+framework module Pods_WZAdvLib_Tests {
+  umbrella header "Pods-WZAdvLib_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

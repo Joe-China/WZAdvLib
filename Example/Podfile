@@ -5,6 +5,10 @@ platform :ios, '8.0'
 target 'WZAdvLib_Example' do
   pod 'WZAdvLib', :path => '../'
 
+  pod 'Masonry'
+  pod 'SDCycleScrollView'
+  pod 'XHLaunchAd'
+
   target 'WZAdvLib_Tests' do
     inherit! :search_paths
 
