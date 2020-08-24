@@ -7,8 +7,8 @@
 
 #import "AdComponentFactory.h"
 #import "JpositionInfo.h"
-#import <SDCycleScrollView/SDCycleScrollView.h>
 #import <XHLaunchAd/XHLaunchAd.h>
+#import "SDCycleScrollView.h"
 #import "JpositionInfo.h"
 
 
@@ -24,7 +24,6 @@ static AdComponentFactory *viewFactor;
     id<INetHttp>  mNetHttp;
     NSDictionary *mOption;
     id<IKvdb> mKvdb;
-    id<IRouter>mRouter;
     
     JpositionInfo *mPosModel;
     NSMutableArray *redirectUrlArr;
@@ -50,7 +49,6 @@ static AdComponentFactory *sInstance = nil;
             mNetHttp = netHttp;
             mKvdb = kvdb;
             mOption = opt;
-            mRouter = router;
 }
 
 
@@ -59,25 +57,25 @@ static AdComponentFactory *sInstance = nil;
        
        [mNetHttp reqAdsDataWithPagekey:pagekey andPosKey:poskey callback:^(NSDictionary * res) {
             NSLog(@"%@",res);
-            picArr = [NSMutableArray new];
-            redirectUrlArr = [NSMutableArray new];
+           self->picArr = [NSMutableArray new];
+           self->redirectUrlArr = [NSMutableArray new];
             NSDictionary *positionDic = [res objectForKey:@"positionInfo"];
             NSArray *planList = [res objectForKey:@"planList"];
             NSString *width =[positionDic objectForKey:@"width"];
             NSString *height =[positionDic objectForKey:@"height"];
             NSString *str = [NSString stringWithFormat:@"img_%@x%@",width,height];
             [planList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [picArr addObject:obj[@"pics"][str]];  
-                [redirectUrlArr addObject:[obj valueForKey:@"jumpUrl"]];
+                [self->picArr addObject:obj[@"pics"][str]];
+                [self->redirectUrlArr addObject:[obj valueForKey:@"jumpUrl"]];
             }];
         
-            mPosModel = [[JpositionInfo alloc] initWithDict:positionDic];
-            NSString *String = [NSString stringWithFormat:@"%@",mPosModel.advType];
+           self->mPosModel = [[JpositionInfo alloc] initWithDict:positionDic];
+           NSString *String = [NSString stringWithFormat:@"%@",self->mPosModel.advType];
             if ([String isEqualToString:@"4"]) {
-               aview =[self createAdComponentWithAdType:mPosModel.advType];
-               [view addSubview:aview];
+                self->aview =[self createAdComponentWithAdType:self->mPosModel.advType];
+                [view addSubview:self->aview];
             }else if([String isEqualToString:@"2"]){
-              [self createAdComponentWithAdType:mPosModel.advType];
+                [self createAdComponentWithAdType:self->mPosModel.advType];
             }
       }];
 }
