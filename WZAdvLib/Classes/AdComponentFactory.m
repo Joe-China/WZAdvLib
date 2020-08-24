@@ -7,9 +7,8 @@
 
 #import "AdComponentFactory.h"
 #import "JpositionInfo.h"
-#import <XHLaunchAd/XHLaunchAd.h>
 #import "SDCycleScrollView.h"
-#import "JpositionInfo.h"
+#import "XHLaunchAd.h"
 
 
 #define  WIDTH    [UIScreen mainScreen].bounds.size.width
@@ -83,8 +82,6 @@ static AdComponentFactory *sInstance = nil;
 - (void)removeAdView{
    [aview removeFromSuperview];
 }
-
-
 
 
 - (UIView *)createAdComponentWithAdType:(NSString *)type{
