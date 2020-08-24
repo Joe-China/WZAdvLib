@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SliderView : BaseView
 
+- (void)createSliderView:(NSInteger)type;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

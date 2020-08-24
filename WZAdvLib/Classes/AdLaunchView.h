@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdLaunchView : BaseView
 
+
+- (void)createAdLaunchView:(NSInteger)type;
+
 @end
 
 NS_ASSUME_NONNULL_END

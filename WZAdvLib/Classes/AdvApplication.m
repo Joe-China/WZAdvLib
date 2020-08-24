@@ -10,4 +10,14 @@
 
 @implementation AdvApplication
 
+
+- (void)createAdView:(NSString *)pagekey posKey:(NSString *)poskey  view:(UIView *)view option:(nullable NSDictionary *)opt{
+
+
+
+
+
+}
+
+
 @end
