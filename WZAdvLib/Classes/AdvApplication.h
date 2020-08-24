@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdvApplication : NSObject
 
 
+
+
 - (void)createAdView:(NSString *)pagekey posKey:(NSString *)poskey  view:(UIView *)view option:(nullable NSDictionary *)opt;
 
 @end
