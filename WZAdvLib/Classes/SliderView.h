@@ -6,13 +6,11 @@
 //  Copyright © 2020 felix. All rights reserved.
 //
 
-#import "BaseView.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SliderView : BaseView
+@interface SliderView : NSObject
 
-+ (UIView *)createSliderView;
++ (UIView *)createSliderView:(NSDictionary *)dic;
 
 
 @end

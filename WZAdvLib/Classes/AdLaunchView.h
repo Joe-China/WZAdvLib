@@ -6,14 +6,11 @@
 //  Copyright © 2020 felix. All rights reserved.
 //
 
-#import "BaseView.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdLaunchView : BaseView
+@interface AdLaunchView:NSObject
 
-
-+ (UIView *)createAdLaunchView;
++ (UIView *)createAdLaunchView:(NSDictionary *)dic;
 
 @end
 

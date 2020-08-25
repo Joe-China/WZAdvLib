@@ -13,10 +13,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef enum viewType{
-     slider = 1,
-     launch = 2,
-} viewType;
+typedef NS_ENUM(NSInteger,viewType){
+      adLaunchView = 2,
+      adSliderView  = 4,
+};
 
 
 @protocol AdComponentFactoryDelegate <NSObject>
@@ -38,7 +38,7 @@ typedef enum viewType{
 //- (void)removeAdView;
 
 
-- (UIView *)createAdComponentWithAdType:(NSString *)type;
+- (UIView *)createAdComponentWithAdType:(viewType )type dic:(NSDictionary *)dic;
 
 @property (nonatomic, assign) id <AdComponentFactoryDelegate> delegate;
 

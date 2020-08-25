@@ -28,13 +28,11 @@
 @implementation AdComponentFactory
 
 
-
-- (UIView *)createAdComponentWithAdType:(NSString *)type{
-    NSString *String = [NSString stringWithFormat:@"%@",type];
-    if ([String isEqualToString:@"4"]) {
-        return [SliderView createSliderView];
-    }else if ([String isEqualToString:@"2"]) {
-        return [AdLaunchView createAdLaunchView];
+- (UIView *)createAdComponentWithAdType:(viewType )type dic:(NSDictionary *)dic{
+    if (type ==adLaunchView) {
+        return [AdLaunchView createAdLaunchView:dic];
+    }else if (type==adSliderView){
+        return [SliderView createSliderView:dic];
     }
       return nil;
 }
@@ -49,6 +47,9 @@ static AdComponentFactory *sInstance = nil;
     });
     return sInstance;
 }
+
+
+
 //
 //
 //- (void)init:(id<INetHttp>)netHttp andKvdb:(id<IKvdb>)kvdb  option:(nullable NSDictionary *)opt{

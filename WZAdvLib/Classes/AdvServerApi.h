@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reqAdvData:(NSString *)pageKey  andPosKey:(NSString *)posKey callback:(iCallback)callback;
 
 
+
+
 -(void) setAdInfoToDb:(NSDictionary*)dic pageKey:(NSString *)pageKey posKey:(NSString *)posKey;
 
 

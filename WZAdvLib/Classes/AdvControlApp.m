@@ -12,8 +12,6 @@
 #import "AdvServerApi.h"
 #import "JpositionInfo.h"
 #import "AdComponentFactory.h"
- 
-
 
 @interface AdvControlApp(){
     JpositionInfo *mPosModel;
@@ -39,7 +37,7 @@ static AdvControlApp *sInstance = nil;
 
 - (void)createAdView:(NSString *)pagekey posKey:(NSString *)poskey  view:(UIView *)view option:(nullable NSDictionary *)opt{
 
-    NSDictionary *positionDic = [[AdvServerApi getInstance] getAdInfoFromDb:pagekey posKey:poskey];
+//    NSDictionary *positionDic = [[AdvServerApi getInstance] getAdInfoFromDb:pagekey posKey:poskey];
 
      [[AdvServerApi getInstance] reqAdvData:pagekey andPosKey:poskey callback:^(NSDictionary * res) {
            self->picArr = [NSMutableArray new];
@@ -54,29 +52,19 @@ static AdvControlApp *sInstance = nil;
                 [self->redirectUrlArr addObject:[obj valueForKey:@"jumpUrl"]];
             }];
             
-     // 1. 字典转模型
          self->mPosModel = [[JpositionInfo alloc] initWithDict:positionDic];
-     // 2.创建view
-        UIView *aview = [self creatView:[NSString stringWithFormat:@"%@",self->mPosModel.advType]];
-     //3.显示view
-         [view removeFromSuperview];
-         [view addSubview:aview];
+          UIView *aview = [self creatView:[self->mPosModel.advType  integerValue] dic:res];
+         if (aview) {
+//               [view removeFromSuperview];
+               [view addSubview:aview];
+          }
     }];
 }
 
 
-- (void)showView{
-  
-
+- (UIView *)creatView:(viewType )type  dic:(NSDictionary *)dic{
+   return [[AdComponentFactory getInstance] createAdComponentWithAdType:type dic:dic];
 }
-
-
-
-- (UIView *)creatView:(NSString *)type{
-   return  [[AdComponentFactory getInstance] createAdComponentWithAdType:type];
-
-}
-
 
 
 @end

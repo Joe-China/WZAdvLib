@@ -21,7 +21,6 @@
 		0F24C4851CF84DB8719421F4254E2CE8 /* SDImageIOAnimatedCoderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0554CCF90F65AE8508AB02130A4A4E15 /* SDImageIOAnimatedCoderInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0F605B039A2520BDFDB1FB38CC8A07E5 /* UIColor+SDHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 745F54B0448E802A1667A1EA145AB41A /* UIColor+SDHexString.m */; };
 		0F987C01F60EDA0377419797266B1652 /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = E7A8A7D968FF05C8AC61B5EF6848D601 /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		106BE6AF48F31ABE76E6563680513F55 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271CF157F59D3DBA25A59F07A79A91C9 /* BaseView.m */; };
 		10F04A8EE71ACF3313225EAD94EAEDD3 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = FC864E2A39CA5A052EF5D9AC2F1E16F7 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10F9208F87EC87209A1730FF569247A5 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F170254FB9B52E8EB10D27970D8499 /* UIView+WebCache.m */; };
 		112861B1A5E1F682EE0FD19E74309658 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF807BD48CC0B2D6067B66677570908 /* Foundation.framework */; };
@@ -160,7 +159,6 @@
 		8EDC04DFE1B9D207C1621DC213C89B43 /* SDImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7978894E8FC363240501A67C5BDD0DE2 /* SDImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F66B8BB0E6448219718D9FE6CB68470 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB4AB2C108008265803232043B1D78EB /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9028586BFCE3D6EFE9DAF73F254D13D3 /* SDWebImageDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F39FC7FE0A08AD36CDAB53E34B97EAC /* SDWebImageDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		913087B4C9AB17D64B865C83CE116F5F /* BaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 989967FA599DB16C8936CFC3A169BA7B /* BaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91C0FBB4FBD2CB0FA5B2A6C34F0E3559 /* SDAsyncBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF04D87DCB48C13ABCA0028ABA8A5381 /* SDAsyncBlockOperation.m */; };
 		920F2511B771D7343369B411A3547E16 /* SDImageLoadersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC72156044C485829069413459C8512 /* SDImageLoadersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93C981522D0085BF13873759F78FC8E8 /* SDImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7140ED123F15CB1658FACC9263DFBD6A /* SDImageCoderHelper.m */; };
@@ -380,7 +378,6 @@
 		21817E5E0912B7100C973EEE59E6A482 /* FLAnimatedImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FLAnimatedImage-Info.plist"; sourceTree = "<group>"; };
 		21A521855F42C5F7F02D7402A5B9BEAF /* XHLaunchAdController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XHLaunchAdController.h; path = XHLaunchAd/XHLaunchAd/XHLaunchAdController.h; sourceTree = "<group>"; };
 		26F170254FB9B52E8EB10D27970D8499 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/Core/UIView+WebCache.m"; sourceTree = "<group>"; };
-		271CF157F59D3DBA25A59F07A79A91C9 /* BaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseView.m; path = WZAdvLib/Classes/BaseView.m; sourceTree = "<group>"; };
 		278A9016EC03EE070DDF042ECCFEFC85 /* TADotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TADotView.h; path = SDCycleScrollView/Lib/SDCycleScrollView/PageControl/TADotView.h; sourceTree = "<group>"; };
 		27B931E0A69E2181F691F50B346629C3 /* Pods-WZAdvLib_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WZAdvLib_Tests-Info.plist"; sourceTree = "<group>"; };
 		283C943C3741B1FB48E5768DF0BE376A /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/Core/SDImageCacheConfig.m; sourceTree = "<group>"; };
@@ -515,7 +512,6 @@
 		980489281D8046B285C97EFFDCF41AE4 /* Pods-WZAdvLib_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WZAdvLib_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		986ABBF8757FF94DB2E362B25A679563 /* SDDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDiskCache.h; path = SDWebImage/Core/SDDiskCache.h; sourceTree = "<group>"; };
 		98801BB77DE47DAADF9999D62A01A9CF /* SDWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWeakProxy.m; path = SDWebImage/Private/SDWeakProxy.m; sourceTree = "<group>"; };
-		989967FA599DB16C8936CFC3A169BA7B /* BaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = WZAdvLib/Classes/BaseView.h; sourceTree = "<group>"; };
 		98B3DFED37D7594D9AE3BCA981611ADB /* WZAdvLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WZAdvLib-dummy.m"; sourceTree = "<group>"; };
 		99D9A4A04F53F171770FC8A0A667B774 /* Pods-WZAdvLib_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WZAdvLib_Tests.modulemap"; sourceTree = "<group>"; };
 		9A9BF5B6D57729770E40F0AB89EBC18A /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/Core/SDAnimatedImageView.h; sourceTree = "<group>"; };
@@ -953,8 +949,6 @@
 				83CF710BDBCDE4CFF5719B193C0C22E1 /* AdvControlApp.m */,
 				2C0BF4BFE71BAF2A30650915A40B207E /* AdvServerApi.h */,
 				B25906EF917ED77010AAE1BE7B07B309 /* AdvServerApi.m */,
-				989967FA599DB16C8936CFC3A169BA7B /* BaseView.h */,
-				271CF157F59D3DBA25A59F07A79A91C9 /* BaseView.m */,
 				2159037D48FB7808BCC0C5CD306F0619 /* IKvdb.h */,
 				BC38FAC15DA0FFDFAF9B77434E56B7A1 /* INetHttp.h */,
 				B55B67A2FD35C341F43009CC55918AE0 /* JpositionInfo.h */,
@@ -1292,7 +1286,6 @@
 				1C6926E4E6AF9A62A18DE6C8528110D9 /* AdvApplication.h in Headers */,
 				44844899DDB25175DA8F22EA09746B86 /* AdvControlApp.h in Headers */,
 				CC63BCA5D6E8673785BF5B4AEB4F2889 /* AdvServerApi.h in Headers */,
-				913087B4C9AB17D64B865C83CE116F5F /* BaseView.h in Headers */,
 				E737BA8FDF8C155E2D40120B932705A6 /* IKvdb.h in Headers */,
 				BDCD4DD7F14E64756AFB70117A170C00 /* INetHttp.h in Headers */,
 				AF80EA66FB08A7A25BF1817F8533F714 /* JpositionInfo.h in Headers */,
@@ -1669,7 +1662,6 @@
 				5FB858B0229CED7E3D6761A5B2C498F6 /* AdvApplication.m in Sources */,
 				C13A5682F1A76F4CE0D4A8885B76F75C /* AdvControlApp.m in Sources */,
 				4CA1348B94481949064D0CC8DDABDD53 /* AdvServerApi.m in Sources */,
-				106BE6AF48F31ABE76E6563680513F55 /* BaseView.m in Sources */,
 				E3AEDA63366B9C40A54DB23F82A0B057 /* JpositionInfo.m in Sources */,
 				E64665ECB25B0BB1AE3A5D720CC22B95 /* SliderView.m in Sources */,
 				29A57A7DAB2812C578881B3A1B8DF68C /* WZAdvLib-dummy.m in Sources */,
