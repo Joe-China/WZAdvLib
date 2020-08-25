@@ -15,10 +15,9 @@
 #import "AdvApplication.h"
 #import "AdvControlApp.h"
 #import "AdvServerApi.h"
-#import "BaseView.h"
 #import "IKvdb.h"
 #import "INetHttp.h"
-#import "IRouter.h"
+#import "JAdvInfoModel.h"
 #import "JpositionInfo.h"
 #import "SliderView.h"
 
