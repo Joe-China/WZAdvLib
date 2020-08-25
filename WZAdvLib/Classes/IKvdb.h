@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol IKvdb <NSObject>
 
-- (void)setKvdb;
+- (void)setKvdb:(NSDictionary *)dic  key:(NSString *)key;
+
+- (NSDictionary *)getKvdb:(NSString *)key;
 
 @end
 

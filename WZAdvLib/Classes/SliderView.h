@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SliderView : BaseView
 
-- (void)createSliderView:(NSInteger)type;
++ (UIView *)createSliderView;
 
 
 @end

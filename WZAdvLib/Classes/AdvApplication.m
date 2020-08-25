@@ -7,15 +7,13 @@
 //
 
 #import "AdvApplication.h"
-#import "INetHttp.h"
+
 #import "IKvdb.h"
 
 
 
 @implementation AdvApplication{
-    id<INetHttp>  mNetHttp;
     NSDictionary *mOption;
-    id<IKvdb> mKvdb;
 }
 
 static AdvApplication *sInstance = nil;
@@ -30,19 +28,15 @@ static AdvApplication *sInstance = nil;
 
 
 - (void)init:(id<INetHttp>)netHttp andKvdb:(id<IKvdb>)kvdb  option:(nullable NSDictionary *)opt{
-            mNetHttp = netHttp;
-            mKvdb = kvdb;
-            mOption = opt;
+        mOption = opt;
+        [[AdvServerApi getInstance] init:netHttp andKvdb:kvdb];
 }
 
 
 
 - (void)createAdView:(NSString *)pagekey posKey:(NSString *)poskey  view:(UIView *)view option:(nullable NSDictionary *)opt{
-
-
-
-
-
+    
+     [[AdvControlApp getInstance] createAdView:pagekey posKey:poskey view:view option:opt];
 }
 
 

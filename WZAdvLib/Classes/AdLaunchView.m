@@ -7,14 +7,20 @@
 //
 
 #import "AdLaunchView.h"
+#import "XHLaunchAd.h"
 
 @implementation AdLaunchView
 
-- (void)createAdLaunchView:(NSInteger)type{
-
-
-
-
++ (UIView *)createAdLaunchView{
+ 
+   [XHLaunchAd setLaunchSourceType:SourceTypeLaunchImage];
+        XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration defaultConfiguration];
+        imageAdconfiguration.imageNameOrURLString  = @"https://imgcdn-prd.pydp888.com/3/block/ca/ca43a4a020db13939d529fa411933c95.jpg";
+//        imageAdconfiguration.imageNameOrURLString  =picArr[0];
+//        imageAdconfiguration.openModel  = redirectUrlArr[0] ;
+         imageAdconfiguration.duration   = 3;
+//        [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:viewFactor];
+        return nil;
 }
 
 @end
