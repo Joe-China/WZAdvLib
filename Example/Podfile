@@ -8,7 +8,8 @@ target 'WZAdvLib_Example' do
   pod 'Masonry'
   pod 'SDCycleScrollView'
   pod 'XHLaunchAd'
-
+  pod 'MJExtension'
+  pod 'JSONModel'
   target 'WZAdvLib_Tests' do
     inherit! :search_paths
 
