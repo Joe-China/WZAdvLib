@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WZAdvLib'
-  s.version          = '0.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'A short description of WZAdvLib.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/XuanShangSDK/WZAdvLib'
+  s.homepage         = 'https://github.com/Joe-China/WZAdvLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'XuanShangSDK' => '363755168@qq.com' }
-  s.source           = { :git => 'https://github.com/XuanShangSDK/WZAdvLib.git', :tag => s.version.to_s }
+  s.author           = { 'Joe-China' => '363755168@qq.com' }
+  s.source           = { :git => 'https://github.com/Joe-China/WZAdvLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -35,9 +35,8 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'WZAdvLib' => ['WZAdvLib/Assets/*.png']
   # }
-
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-#  s.dependency 'Masonry','SDCycleScrollView','XHLaunchAd'
+  s.dependency 'Masonry','SDCycleScrollView','XHLaunchAd','JSONModel','MJExtension'
 end

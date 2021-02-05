@@ -37,9 +37,32 @@ static AdvControlApp *sInstance = nil;
 
 - (void)createAdView:(NSString *)pagekey posKey:(NSString *)poskey  view:(UIView *)view option:(nullable NSDictionary *)opt{
 
-//    NSDictionary *positionDic = [[AdvServerApi getInstance] getAdInfoFromDb:pagekey posKey:poskey];
+//    NSDictionary *resDic = [[AdvServerApi getInstance] getAdInfoFromDb:pagekey posKey:poskey];
 
-     [[AdvServerApi getInstance] reqAdvData:pagekey andPosKey:poskey callback:^(NSDictionary * res) {
+//    if (resDic) {
+//           self->picArr = [NSMutableArray new];
+//           self->redirectUrlArr = [NSMutableArray new];
+//            NSDictionary *positionDic = [resDic objectForKey:@"positionInfo"];
+//            NSArray *planList = [resDic objectForKey:@"planList"];
+//            NSString *width =[positionDic objectForKey:@"width"];
+//            NSString *height =[positionDic objectForKey:@"height"];
+//            NSString *str = [NSString stringWithFormat:@"img_%@x%@",width,height];
+//            [planList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                [self->picArr addObject:obj[@"pics"][str]];
+//                [self->redirectUrlArr addObject:[obj valueForKey:@"jumpUrl"]];
+//            }];
+//
+//         self->mPosModel = [[JpositionInfo alloc] initWithDict:positionDic];
+//          UIView *aview = [self creatView:[self->mPosModel.advType  integerValue] dic:resDic];
+//         if (aview) {
+//               [view addSubview:aview];
+//          }
+//    }else{
+        [[AdvServerApi getInstance] reqAdvData:pagekey andPosKey:poskey callback:^(NSDictionary * res) {
+           NSLog(@"%@",res);
+           
+           [[AdvServerApi getInstance] setAdInfoToDb:res pageKey:pagekey posKey:poskey];
+           
            self->picArr = [NSMutableArray new];
            self->redirectUrlArr = [NSMutableArray new];
             NSDictionary *positionDic = [res objectForKey:@"positionInfo"];
@@ -55,11 +78,13 @@ static AdvControlApp *sInstance = nil;
          self->mPosModel = [[JpositionInfo alloc] initWithDict:positionDic];
           UIView *aview = [self creatView:[self->mPosModel.advType  integerValue] dic:res];
          if (aview) {
-//               [view removeFromSuperview];
-               [view addSubview:aview];
+                [view addSubview:aview];
           }
     }];
-}
+    
+ }
+
+//}
 
 
 - (UIView *)creatView:(viewType )type  dic:(NSDictionary *)dic{

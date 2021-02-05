@@ -27,17 +27,16 @@ static AdvApplication *sInstance = nil;
 }
 
 
+//初始化
 - (void)init:(id<INetHttp>)netHttp andKvdb:(id<IKvdb>)kvdb  option:(nullable NSDictionary *)opt{
         mOption = opt;
         [[AdvServerApi getInstance] init:netHttp andKvdb:kvdb];
 }
 
-
-
+//通过key 创建view 及数据
 - (void)createAdView:(NSString *)pagekey posKey:(NSString *)poskey  view:(UIView *)view option:(nullable NSDictionary *)opt{
-    
-     [[AdvControlApp getInstance] createAdView:pagekey posKey:poskey view:view option:opt];
+        
+       [[AdvControlApp getInstance] createAdView:pagekey posKey:poskey view:view option:opt];
 }
-
 
 @end

@@ -6,8 +6,6 @@
 //  Copyright © 2020 felix. All rights reserved.
 //
 
-//#import "JBase.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JpositionInfo : NSObject

@@ -8,24 +8,26 @@
 
 #import "SliderView.h"
 #import "SDCycleScrollView.h"
-
+ 
 #define  WIDTH    [UIScreen mainScreen].bounds.size.width
 #define WidthScale(number) ([UIScreen mainScreen].bounds.size.width/375.*(number))
 
 
 static NSMutableArray *redirectUrlArr;
 static NSMutableArray *picArr;
+static SliderView    *sliderView;
+
 @interface SliderView()<SDCycleScrollViewDelegate>{
-//     NSMutableArray *redirectUrlArr;
-//     NSMutableArray *picArr;
+    NSMutableArray *picArr;
 }
 
 @end
 
 @implementation SliderView
-
 + (UIView *)createSliderView:(NSDictionary *)dic{
         picArr = [NSMutableArray new];
+        sliderView = [[SliderView alloc] init];
+        redirectUrlArr=[NSMutableArray new];
         NSDictionary *positionInfo = [dic objectForKey:@"positionInfo"];
         NSArray *planList = [dic objectForKey:@"planList"];
         NSString *width =[positionInfo objectForKey:@"width"];
@@ -34,16 +36,26 @@ static NSMutableArray *picArr;
         [planList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [picArr addObject:obj[@"pics"][str]];
                 [redirectUrlArr addObject:[obj valueForKey:@"jumpUrl"]];
+                NSLog(@"%@",picArr);
+                NSLog(@"%@",redirectUrlArr);
             }];
+           
+         NSString *toProject =[positionInfo objectForKey:@"toProject"];
+         SDCycleScrollView *cycleScrollView;
+         if ([toProject isEqualToString:@"/biz/wz/"]) { //DOU K
+            cycleScrollView  =  [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(WidthScale(10), WidthScale(0),  WIDTH-WidthScale(20), WidthScale(141))  delegate:sliderView placeholderImage:[UIImage imageNamed:@""]];
+            
+               cycleScrollView.layer.cornerRadius = WidthScale(5.0);
 
-
-
-        SDCycleScrollView *cycleScrollView  = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,0,WIDTH, WidthScale(150))  delegate:self placeholderImage:[UIImage imageNamed:@"123456"]];
-
-       cycleScrollView.imageURLStringsGroup = @[@"https://imgcdn-prd.pydp888.com/3/block/f4/f455d98065b583267d315114211a71da.jpg",@"https://imgcdn-prd.pydp888.com/3/block/ca/ca43a4a020db13939d529fa411933c95.jpg"];
-        
+               cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"dian_selected"];
+               cycleScrollView.pageDotImage = [UIImage imageNamed:@"dian"];
+               
+         }else if ([toProject isEqualToString:@"/biz/xs/"]){ // XUANSHANG
+           
+           cycleScrollView  = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0,0,WIDTH, WidthScale(150))  delegate:sliderView placeholderImage:nil];
+         }
+         
         cycleScrollView.imageURLStringsGroup =picArr;
-
         cycleScrollView.autoScrollTimeInterval = 3.0;
         if (cycleScrollView.imageURLStringsGroup.count==1) {
             cycleScrollView.autoScroll = NO;
@@ -51,12 +63,17 @@ static NSMutableArray *picArr;
         cycleScrollView.backgroundColor =[UIColor clearColor];
         cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
         cycleScrollView.pageDotColor = [UIColor lightGrayColor];
-       
+        cycleScrollView.clipsToBounds = YES;
         return cycleScrollView;
-        
 }
 
 
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+//       NSLog(@"%ld",(long)index);
+       
+       [[NSNotificationCenter  defaultCenter] postNotificationName:@"sliderIndex" object:@(index) userInfo:@{@"url":redirectUrlArr}];
+       
+}
 
 
 @end

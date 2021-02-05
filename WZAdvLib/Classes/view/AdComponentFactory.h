@@ -19,13 +19,13 @@ typedef NS_ENUM(NSInteger,viewType){
 };
 
 
-@protocol AdComponentFactoryDelegate <NSObject>
-
-@optional
-
-- (void)doCycleViewClick:(NSInteger )index  view:(UIView *)view redirectUrls:(NSMutableArray *)urls;
-- (void)doLaunchAdClick;
-@end
+//@protocol AdComponentFactoryDelegate <NSObject>
+//
+//@optional
+//
+//- (void)doCycleViewClick:(NSInteger )index  view:(UIView *)view redirectUrls:(NSMutableArray *)urls;
+//
+//@end
 
 @interface AdComponentFactory : NSObject
 
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger,viewType){
 
 - (UIView *)createAdComponentWithAdType:(viewType )type dic:(NSDictionary *)dic;
 
-@property (nonatomic, assign) id <AdComponentFactoryDelegate> delegate;
+//@property (nonatomic, assign) id <AdComponentFactoryDelegate> delegate;
 
 @end
 

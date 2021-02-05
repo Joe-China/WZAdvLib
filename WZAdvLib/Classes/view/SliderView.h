@@ -1,5 +1,5 @@
 //
-//  AdLaunchView.h
+//  SliderView.h
 //  XuanShang
 //
 //  Created by YangMean on 2020/8/24.
@@ -7,10 +7,14 @@
 //
 
 NS_ASSUME_NONNULL_BEGIN
+ 
 
-@interface AdLaunchView:NSObject
+@interface SliderView : NSObject
 
-+ (UIView *)createAdLaunchView:(NSDictionary *)dic;
++ (UIView *)createSliderView:(NSDictionary *)dic;
+
+
+
 
 @end
 

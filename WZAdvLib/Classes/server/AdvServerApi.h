@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
+// db
+
 -(void) setAdInfoToDb:(NSDictionary*)dic pageKey:(NSString *)pageKey posKey:(NSString *)posKey;
 
 

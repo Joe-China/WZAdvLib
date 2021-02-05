@@ -17,6 +17,7 @@ typedef void(^iCallback)(NSDictionary *_Nonnull);
 
 - (void)reqAdsDataWithPagekey:(NSString *)pageKey andPosKey:(NSString *)posKey callback:(iCallback)callback;
 
+
 @optional
 - (void)uploadPositionShowWithMapId:(NSInteger)mapId  position:(NSInteger)pos  totoal:(NSInteger)total callback:(iCallback)callback;
 

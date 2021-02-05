@@ -26,7 +26,8 @@ static AdvServerApi *sInstance = nil;
 }
 
 
-- (void)init:(id<INetHttp>)netHttp andKvdb:(id<IKvdb>)kvdb{
+- (void)
+init:(id<INetHttp>)netHttp andKvdb:(id<IKvdb>)kvdb{
     mNetHttp = netHttp;
     mKvdb = kvdb;
 }
@@ -57,7 +58,6 @@ static AdvServerApi *sInstance = nil;
 
 -(NSDictionary *) getAdInfoFromDb:(NSString *)pageKey  posKey:(NSString *)posKey{
      return [mKvdb getKvdb:[NSString stringWithFormat:@"%@_%@",pageKey,posKey]];
-
 }
 
 
