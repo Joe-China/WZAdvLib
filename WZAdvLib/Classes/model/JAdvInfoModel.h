@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JSONModel.h>
 #import "JSONModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
