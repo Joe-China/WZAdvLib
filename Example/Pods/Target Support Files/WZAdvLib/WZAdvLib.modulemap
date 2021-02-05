@@ -1,6 +1,0 @@
-framework module WZAdvLib {
-  umbrella header "WZAdvLib-umbrella.h"
-
-  export *
-  module * { export * }
-}
