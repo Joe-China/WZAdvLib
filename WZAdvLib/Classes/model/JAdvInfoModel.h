@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
+#import <JSONModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSDictionary *positionInfo;
 @property(nonatomic,strong)NSArray *planList;
 
+ 
 
 @end
 

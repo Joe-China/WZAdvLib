@@ -37,6 +37,10 @@ TODO: Add long description of the pod here.
   # }
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Masonry','SDCycleScrollView','XHLaunchAd','JSONModel','MJExtension'
+  
+   s.dependency 'Masonry'
+    s.dependency 'SDCycleScrollView'
+     s.dependency 'XHLaunchAd'
+      s.dependency 'JSONModel'
+       s.dependency 'MJExtension'
 end

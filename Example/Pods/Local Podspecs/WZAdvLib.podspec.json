@@ -1,22 +1,39 @@
 {
   "name": "WZAdvLib",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "summary": "A short description of WZAdvLib.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/XuanShangSDK/WZAdvLib",
+  "homepage": "https://github.com/Joe-China/WZAdvLib",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "XuanShangSDK": "363755168@qq.com"
+    "Joe-China": "363755168@qq.com"
   },
   "source": {
-    "git": "https://github.com/XuanShangSDK/WZAdvLib.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Joe-China/WZAdvLib.git",
+    "tag": "1.1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WZAdvLib/Classes/**/*"
+  "source_files": "WZAdvLib/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "SDCycleScrollView": [
+
+    ],
+    "XHLaunchAd": [
+
+    ],
+    "JSONModel": [
+
+    ],
+    "MJExtension": [
+
+    ]
+  }
 }

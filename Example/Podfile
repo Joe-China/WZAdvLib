@@ -1,18 +1,17 @@
 #use_frameworks!
-#
-#platform :ios, '8.0'
-#
-#target 'WZAdvLib_Example' do
-#  pod 'WZAdvLib', :path => '../'
+
+platform :ios, '8.0'
+
+target 'WZAdvLib_Example' do
+  pod 'WZAdvLib', :path => '../'
 #
 #  pod 'Masonry'
 #  pod 'SDCycleScrollView'
 #  pod 'XHLaunchAd'
 #  pod 'MJExtension'
 #  pod 'JSONModel'
-#  target 'WZAdvLib_Tests' do
-#    inherit! :search_paths
-#
-#
-#  end
-#end
+  target 'WZAdvLib_Tests' do
+    inherit! :search_paths
+  end
+
+end
