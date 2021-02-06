@@ -6,6 +6,7 @@
 //
 
 #import "JAdvInfoModel.h"
+
 @implementation JAdvInfoModel
 
 @end

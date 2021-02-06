@@ -6,13 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
+//#import <JSONModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JAdvInfoModel : JSONModel
-@property(nonatomic,strong)NSDictionary *positionInfo;
-@property(nonatomic,strong)NSArray *planList;
+@interface JAdvInfoModel : NSObject
+//@property(nonatomic,strong)NSDictionary *positionInfo;
+//@property(nonatomic,strong)NSArray *planList;
 
  
 
