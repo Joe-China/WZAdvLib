@@ -40,7 +40,7 @@ TODO: Add long description of the pod here.
   
    s.dependency 'Masonry'
     s.dependency 'SDCycleScrollView'
-     s.dependency 'XHLaunchAd','~>3.9.10'
+     s.dependency 'XHLaunchAd','~>3.9.12'
       s.dependency 'JSONModel'
        s.dependency 'MJExtension'
 end
