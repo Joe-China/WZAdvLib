@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WZAdvLib'
-  s.version          = '1.1.2'
-  s.summary          = 'A short description of WZAdvLib.'
+  s.version          = '1.1.4'
+  s.summary          = 'WZAdvLib for wz'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
